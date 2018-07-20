@@ -10,11 +10,19 @@ $viewWork.addEventListener('click', (e) => {
     })
 });
 
-// init Isotope
-var $isotope = $('#isotope-container').isotope({});
-// filter items on button click
-$('#isotope-filters').on( 'click', 'button', function() {
-var filterValue = $(this).attr('data-filter');
-$isotope.isotope({ filter: filterValue });
+// Init Isotope
+const iso = new Isotope( '#isotope-container', {
+    itemSelector: '.image-wrapper',
+    layoutMode: 'fitRows'
 });
+
+const $filtersElem = document.querySelector('#isotope-filters');
+
+$filtersElem.addEventListener('click', (e) => {
+    let filterValue = event.target.getAttribute('data-filter');
+    // use matching filter function
+    iso.arrange({ filter: filterValue });
+});
+
+
 
