@@ -24,5 +24,8 @@ $filtersElem.addEventListener('click', (e) => {
     iso.arrange({ filter: filterValue });
 });
 
-
+// LIGHTBOX 
+lightbox.option({
+    'alwaysShowNavOnTouchDevices': true
+});
 
