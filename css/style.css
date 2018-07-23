@@ -120,15 +120,21 @@ main {
     width: 250px;
     height: 150px;
     margin: 6px;
-    transition: all 400ms ease-in-out;
-}
 
+}
 .image-wrapper img {
     width: 100%; 
     height: 100%;
 }
 
-.image-wrapper:hover {
+.image-inner {
+    width: 100%;
+    height: 100%;
+    transition: all 400ms ease-in-out;
+}
+
+
+.image-inner:hover{
     transform: scale(1.05);
     opacity: .8;
 }
